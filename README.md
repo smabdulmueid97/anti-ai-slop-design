@@ -6,13 +6,13 @@
 
 Most AI-generated interfaces look the same — same gradient, same font, same three cards — and users can tell in under a second. This skill teaches the agent to spot the tells, pick a real visual direction, and run a check on its own output before it calls the work done.
 
+**🚀 [Try the live demo — see the difference in seconds](https://smabdulmueid97.github.io/anti-ai-slop-design/examples/fixed.html)**
+
+Open [`examples/slop.html`](examples/slop.html) and [`examples/fixed.html`](examples/fixed.html) side by side: same page, one sloppy, one fixed.
+
 [![License: MIT](https://img.shields.io/github/license/smabdulmueid97/anti-ai-slop-design?style=flat-square)](https://github.com/smabdulmueid97/anti-ai-slop-design/blob/main/LICENSE)
 [![Stars](https://img.shields.io/github/stars/smabdulmueid97/anti-ai-slop-design?style=flat-square)](https://github.com/smabdulmueid97/anti-ai-slop-design/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/smabdulmueid97/anti-ai-slop-design?style=flat-square)](https://github.com/smabdulmueid97/anti-ai-slop-design/commits/main)
-
-**[▶ See the difference in seconds — before / after demo](https://smabdulmueid97.github.io/anti-ai-slop-design/examples/fixed.html)**
-
-Open [`examples/slop.html`](examples/slop.html) and [`examples/fixed.html`](examples/fixed.html) side by side: same page, one sloppy, one fixed.
 
 </div>
 
