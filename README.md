@@ -1,10 +1,32 @@
+<div align="center">
+
 # anti-ai-slop-design
 
-A Claude Code skill that stops a coding agent from shipping generic
-AI-looking UI. Most AI-generated interfaces look the same — same gradient,
-same font, same three cards — and users can tell in under a second. This
-skill teaches the agent to spot the tells, pick a real visual direction,
-and run a check on its own output before it calls the work done.
+**Stop AI from shipping UI that looks like AI made it.**
+
+Most AI-generated interfaces look the same — same gradient, same font, same three cards — and users can tell in under a second. This skill teaches the agent to spot the tells, pick a real visual direction, and run a check on its own output before it calls the work done.
+
+[![License: MIT](https://img.shields.io/github/license/smabdulmueid97/anti-ai-slop-design?style=flat-square)](https://github.com/smabdulmueid97/anti-ai-slop-design/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/smabdulmueid97/anti-ai-slop-design?style=flat-square)](https://github.com/smabdulmueid97/anti-ai-slop-design/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/smabdulmueid97/anti-ai-slop-design?style=flat-square)](https://github.com/smabdulmueid97/anti-ai-slop-design/commits/main)
+
+**[▶ See the difference in seconds — before / after demo](https://smabdulmueid97.github.io/anti-ai-slop-design/examples/fixed.html)**
+
+Open [`examples/slop.html`](examples/slop.html) and [`examples/fixed.html`](examples/fixed.html) side by side: same page, one sloppy, one fixed.
+
+</div>
+
+---
+
+## Screenshots
+
+| Mobile | Desktop |
+|---|---|
+| ![Mobile](examples/fixed-screenshot-mobile.png) | ![Desktop](examples/fixed-screenshot-desktop.png) |
+
+> Tested at 360 / 768 / 1280 px — no horizontal overflow, no clipped buttons.
+
+---
 
 ## The tells it kills
 
@@ -21,14 +43,18 @@ and run a check on its own output before it calls the work done.
 
 ## What's inside
 
-- `SKILL.md` — the skill: the tells, the fix process (direction first,
-  then design rules, then the review pass), and a 20-item slop checklist.
-- `scripts/slop-check.py` — a small deterministic checker (Python, no
-  dependencies). Scans HTML/CSS for the mechanical tells and prints
-  PASS/FAIL per check with file and line number.
-- `examples/slop.html` — a deliberately sloppy AI-default landing page.
-- `examples/fixed.html` — the same page redesigned following the skill's
-  rules. Open both in a browser: the difference is visible in seconds.
+| File | What it is |
+|---|---|
+| `SKILL.md` | The skill: the tells, the fix process (direction first, then design rules, then the review pass), and a 20-item slop checklist |
+| `scripts/slop-check.py` | A small deterministic checker (Python, no dependencies). Scans HTML/CSS for the mechanical tells, prints PASS/FAIL per check with file and line number |
+| `examples/slop.html` | A deliberately sloppy AI-default landing page |
+| `examples/fixed.html` | The same page redesigned following the skill's rules — open both, the difference is visible in seconds |
+
+## How the skill works
+
+1. **Pick a real direction first** — one distinctive typeface pairing, one restrained palette with a real accent, real content before layout.
+2. **Design rules** — type scale, spacing, contrast minimums, one accent only, no gradient as a crutch, real photos or honest illustration instead of generic stock, copy that says something specific.
+3. **Slop check** — run the 20-item checklist on your own output before you finish.
 
 ## Install
 
@@ -44,8 +70,7 @@ Then invoke it before building UI:
 /anti-ai-slop-design
 ```
 
-Or paste the checklist from `SKILL.md` into a review prompt and ask the
-agent to score its own output, then fix every failure.
+Or paste the checklist from `SKILL.md` into a review prompt and ask the agent to score its own output, then fix every failure.
 
 ## Run the checker
 
@@ -53,18 +78,12 @@ agent to score its own output, then fix every failure.
 python scripts/slop-check.py examples/slop.html examples/fixed.html
 ```
 
-`slop.html` fails with a list of tells; `fixed.html` passes. The checker
-catches the mechanical tells — the checklist in `SKILL.md` catches the
-judgement ones. Use both.
+`slop.html` fails with a list of tells; `fixed.html` passes. The checker catches the mechanical tells — the checklist in `SKILL.md` catches the judgement ones. Use both.
 
 ## Before / after
 
-- **Before** (`examples/slop.html`): purple-blue gradient hero, Inter
-  everywhere, eyebrow label, three glass cards with emoji bullets,
-  unsourced "10,000+ users" stats, content hidden until JS runs.
-- **After** (`examples/fixed.html`): one distinctive typeface pairing
-  (Fraunces + Newsreader), one accent colour, real words first, concrete
-  pricing, a named team behind it, visible without JavaScript.
+- **Before** (`examples/slop.html`): purple-blue gradient hero, Inter everywhere, eyebrow label, three glass cards with emoji bullets, unsourced "10,000+ users" stats, content hidden until JS runs.
+- **After** (`examples/fixed.html`): one distinctive typeface pairing (Fraunces + Newsreader), one accent colour, real words first, concrete pricing, a named team behind it, visible without JavaScript.
 
 ## License
 
